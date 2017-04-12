@@ -15,10 +15,14 @@ $(function(){
     var $section = $("section");
     var $map = $("#map");
     
+    var currentType = "";
+    
     
     //console.log($veganBtn, $header, $slideshow, $fixedDiv);
     
     $veganBtn.on("click", function(){
+        currentType = "vegan";
+        loading();
         $slideshow.slideUp(2000);
         $fixedDiv.slideUp(2000, function(){
             $map.removeClass("no-display");
@@ -30,6 +34,8 @@ $(function(){
     });
     
     $vegetarianBtn.on("click", function(){
+        currentType = "vegetarian";
+        loading();
         $map.removeClass("no-display").delay(2000);
         $slideshow.slideUp(2000);
         $fixedDiv.slideUp(2000, function(){
@@ -41,6 +47,8 @@ $(function(){
     });
     
      $friendlyBtn.on("click", function(){
+        currentType = "vege-friendly";
+        loading();
         $map.removeClass("no-display").delay(2000);
         $slideshow.slideUp(2000);
         $fixedDiv.slideUp(2000, function(){
@@ -53,11 +61,12 @@ $(function(){
       
 
 var placesUrl = "data.json";
-var itemsLoading = $(".loading");
+var itemsLoading1 = $(".restaurants");
+var itemsLoading2 = $(".stores");
 
     function insertContent(places){
-        $.each(places, function(index, content){    
-        
+        $.each(places, function(index, content){ 
+        if (content.category.includes(currentType)) {
         
         
         var $div = $("<div>").addClass("item");
@@ -66,11 +75,15 @@ var itemsLoading = $(".loading");
         var $image = $("<img>").attr("src", "img/" + content.image);
         var $desc = $("<p>").text(content.desc);
             
-        $div.append($title).append($address).append($image).append($desc);
+    $div.append($title).append($address).append($image).append($desc);
+              
        
-        itemsLoading.append($div);
- 
-            
+        if (content.type === "store") {
+       	   itemsLoading2.append($div);
+       	} else if (content.type == "restaurant") {
+       	    itemsLoading1.append($div);
+       	}
+        }
         });
         
     }
@@ -88,7 +101,7 @@ function loading(){
     });  
     
  }
-loading();
+
 
 
     
