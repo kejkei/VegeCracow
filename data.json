@@ -1,0 +1,13 @@
+{
+"places": 
+[
+{"name": "NOVA KROVA", "address": "Plac Wolnica 12, Cracow", "category": ["vegan"], "type": "restaurant", "desc": "Place to go to if you are around, though never would be on the top of the list. I wasn't amazed by the food and the service", "image": "novakrova.jpg"},
+{"name": "Glonojad", "address": "Plac Matejki 2, Cracow", "category": ["vegan", "vegetarian"], "type": "r[estauran]t", "desc": "Cool place. lots of vegan and vegetarian options from lots of different cousines! I highly recommend this places for people who appreciate great taste", "image": "glonojad.jpg"},
+{"name": "MOMO", "address": "ul. Dietla 49, Cracow", "category": ["vegan", "vegetarian"], "type": "restaurant", "desc": "Cool place. lots of vegan and vegetarian options from lots of different cousines! I highly recommend this places for people who appreciate great taste", "image": "momo.jpg"},
+{"name": "Chimera", "address": "ul Św. Anny 3, Cracow", "category": ["vegetarian", "vege-friendly"], "type": "restaurant", "desc": "Very nice deco, more so for lunch than dinner. Good to visit, but not a must go for a veggie person. Not suitable for vegans", "image": "chimera.jpg"},
+{"name": "Vegab", "address": "ul. Starowiślna 6, Cracow", "category": ["vegan", "vegetarian"], "type": "restaurant", "desc": "Little and cosy place with huge portions of vegan food with fried marinated tofu that gets you very full. Delicious", "image": "vegab.jpg"},
+{"name": "Krowarzywa", "address": "ul. Sławkowska 8, Cracow", "category": ["vegan", "vegetarian"], "type": "restaurant", "desc": "Best burges in the city!", "image": "krowarzywa.jpg"}
+{"name": "Bar Weganski", "address": "ul. Starowislna 28, Cracow", "category": ["vegan"], "type": "restaurant", "desc": "Good vegan options", "image": "barweganski.jpg"}
+
+]
+}
