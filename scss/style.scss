@@ -191,9 +191,9 @@ h2 {
     margin-top: 30px;
     margin-left: 0px;
     img {
-        width: 35%;
-        height: 30%;
-        box-shadow: 0 0 0 0;
+        width: 50%;
+        height: 50%;
+        //box-shadow: 0 0 0 0;
     }
     h3 {
         font-family: 'Lobster';
@@ -216,5 +216,21 @@ h2 {
         margin-right: 17vw;
     }
 }
+#legend {
+        font-family: 'Raleway', sans-serif;
+        background: #fff;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid $primary-color;
+      h3 {
+        margin-top: 0;
+    }
+      img {
+        vertical-align: middle;
+      }
+}
+
+
+
 
 

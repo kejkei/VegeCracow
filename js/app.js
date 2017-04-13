@@ -26,7 +26,7 @@ $(function(){
         $slideshow.slideUp(2000);
         $fixedDiv.slideUp(2000, function(){
             $map.removeClass("no-display");
-            initMap();
+            google.maps.event.trigger(map, 'resize');
         });
         $menu.addClass('changeDisplay').delay(3000);
         $section.addClass('changeDisplay').delay(3000);
@@ -39,7 +39,8 @@ $(function(){
         $map.removeClass("no-display").delay(2000);
         $slideshow.slideUp(2000);
         $fixedDiv.slideUp(2000, function(){
-            initMap();
+            //initMap();
+            google.maps.event.trigger(map, 'resize');
         });
         $menu.addClass('changeDisplay').delay(3000);
         $section.addClass('changeDisplay').delay(3000);
@@ -52,7 +53,8 @@ $(function(){
         $map.removeClass("no-display").delay(2000);
         $slideshow.slideUp(2000);
         $fixedDiv.slideUp(2000, function(){
-            initMap();
+            //initMap();
+            google.maps.event.trigger(map, 'resize');
         });
         $menu.addClass('changeDisplay').delay(3000);
         $section.addClass('changeDisplay').delay(3000);
@@ -72,6 +74,8 @@ var itemsLoading2 = $(".stores");
         var $div = $("<div>").addClass("item");
         var $title = $("<h3>").text(content.name);
         var $address = $("<h4>").text(content.address);
+        $address.attr("data-icon", content.icon);
+            console.log('h4', content.icon);
         var $image = $("<img>").attr("src", "img/" + content.image);
         var $desc = $("<p>").text(content.desc);
             
@@ -86,7 +90,10 @@ var itemsLoading2 = $(".stores");
         }
         });
         
+    geocodeAddress();   
+        
     }
+    
 
 function loading(){  
     $.ajax({
