@@ -83,10 +83,17 @@ $(function () {
 				var $address = $("<h4>").text(content.address);
 				$address.attr("data-icon", content.icon);
 				console.log('h4', content.icon);
+                var $divout = $("<div>").addClass("out");
+                var $divin = $("<div>").addClass("in");
 				var $image = $("<img>").attr("src", "img/" + content.image);
 				var $desc = $("<p>").text(content.desc);
+                var $divimage = $("<img>").attr("src", "img/" + content.icon2);
+                
+                $divin.append($divimage);
+                
+                $divout.append($image).append($divin);
 
-				$div.append($title).append($address).append($image).append($desc);
+				$div.append($title).append($address).append($divout).append($desc);
 
 
 				if (content.type === "store") {
@@ -115,6 +122,27 @@ $(function () {
 		});
 
 	}
+    
+    
+var $divin = $section.find(".in");
+console.log($divin);
+    
+
+$section.on("mouseenter", ".out", function(){
+    console.log("mouuseeneter");
+    
+    $(this).find(".in").addClass('in-active').slideDown();
+    console.log($(this).find(".in"));
+});
+$section.on("mouseout", ".in", function(){
+    console.log("mouseout");
+   $(this).slideUp();
+});
 
 
 });
+
+
+
+
+   

@@ -224,8 +224,8 @@ h2:hover {
     margin-top: 30px;
     margin-left: 0px;
     img {
-        width: 50%;
-        height: 50%;
+        width: 22vw;
+        height: 30vh;
         //box-shadow: 0 0 0 0;
     }
     h3 {
@@ -354,6 +354,34 @@ h2:hover {
         #grand8 {
             width: 65%;
         }
+    }
+}
+.out {
+    position: relative;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    height: 30vh;   
+    //border: 2px solid green;
+    //background-color: red;
+}
+.in {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid green;
+    height: 100%;
+    display: none;
+    width: auto;
+    background-color: rgba(38, 139, 66, 0.5);
+    //opacity: 0.5;
+    img {
+        height: 50%;
+        width: 50%;
+        opacity: 1;
+        margin-left: 6vw;
+        margin-top: 7vh;
     }
 }
 
